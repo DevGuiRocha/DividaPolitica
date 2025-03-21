@@ -43,9 +43,13 @@
         <h3>Exercícios Disponíveis</h3>
         <p class="lead">As informações presentes nos dados são dos seguintes exercícios:</p>
         <div class="d-flex justify-content-center gap-2 flex-wrap">
-            <% @exercicios_disponiveis.each do |ano| %>
+            <% if @exercicios_disponiveis.any? %>
+             <% @exercicios_disponiveis.each do |ano| %>
                 <span class="badge bg-secondary fs-5 px-3 py-2"><%= ano %></span>
             <% end %>
+        <% else %>
+        <p class="text-muted">Nenhum exercício disponível no momento.</p>
+    <% end %>
         </div>
     </div>
 </div>

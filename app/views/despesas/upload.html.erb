@@ -4,7 +4,7 @@
     <%= form_with url: import_despesas_path, multipart: true, method: :post, class: "w-50" do %>
         <div class="mb-3">
             <label for="arquivo" class="form-label">Selecione um arquivo CSV:</label>
-            <%= file_field_tag :arquivo, class: "form-control", acept: ".csv" %>
+           <%= file_field_tag :arquivo, class: "form-control", accept: ".csv" %>
         </div>
 
         <div class="text-center">
